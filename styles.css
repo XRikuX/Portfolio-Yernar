@@ -1,0 +1,226 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background: url('img/background.avif') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #50b3a2;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 60px;
+  margin: 10px 0;
+  animation: fadeInUp 2s ease-out;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: fadeInUp 2.2s ease-out;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeInUp 2.4s ease-out;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn1 {
+  background: #50b3a2;
+  color: #fff;
+}
+
+.btn1:hover {
+  background: #fff;
+  color: #50b3a2;
+}
+
+.btn2 {
+  background: transparent;
+  border: 2px solid #50b3a2;
+  color: #50b3a2;
+}
+
+.btn2:hover {
+  background: #50b3a2;
+  color: #fff;
+}
+
+.about, .services, .portfolio, .contact {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.about p, .service-item p, .portfolio-overlay p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  position: relative;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay h3, .portfolio-overlay p {
+  margin: 0;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button.btn {
+  width: 100%;
+}
+
+footer {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.appear {
+  opacity: 1;
+  transition: opacity 1s;
+}
